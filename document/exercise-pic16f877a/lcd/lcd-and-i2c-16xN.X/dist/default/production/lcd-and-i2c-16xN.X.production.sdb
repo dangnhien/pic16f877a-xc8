@@ -1,0 +1,232 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"6 D:\pic16\document\exercise-pic16f877a\lcd\lcd-and-i2c-16xN.X\libraryUser/i2c/i2c-master.c
+[v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
+"27
+[v _I2C_Wait I2C_Wait `(v  1 e 1 0 ]
+"36
+[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
+"56
+[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
+"67
+[v _I2C_ACK I2C_ACK `(v  1 e 1 0 ]
+"80
+[v _I2C_NACK I2C_NACK `(v  1 e 1 0 ]
+"104
+[v _I2C_Read_Char I2C_Read_Char `(uc  1 e 1 0 ]
+"6 D:\pic16\document\exercise-pic16f877a\lcd\lcd-and-i2c-16xN.X\libraryUser/lcd-i2c/i2c_lcd.c
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+"32
+[v _IO_Expander_Write IO_Expander_Write `(v  1 e 1 0 ]
+"40
+[v _LCD_Write_4Bit LCD_Write_4Bit `(v  1 e 1 0 ]
+"49
+[v _LCD_Cmd LCD_Cmd `(v  1 e 1 0 ]
+"56
+[v _LCD_Write_Char LCD_Write_Char `(v  1 e 1 0 ]
+"63
+[v _LCD_Write_String LCD_Write_String `(v  1 e 1 0 ]
+"69
+[v _LCD_Set_Cursor LCD_Set_Cursor `(v  1 e 1 0 ]
+"99
+[v _LCD_SL LCD_SL `(v  1 e 1 0 ]
+"105
+[v _LCD_SR LCD_SR `(v  1 e 1 0 ]
+"10 D:\pic16\document\exercise-pic16f877a\lcd\lcd-and-i2c-16xN.X\main1234.c
+[v _main main `(v  1 e 1 0 ]
+"31
+[v _screenMove screenMove `(v  1 e 1 0 ]
+"808 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"815
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+[s S97 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1454
+[u S106 . 1 `S97 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES106  1 e 1 @135 ]
+"1754
+[v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
+"1823
+[v _SSPADD SSPADD `VEuc  1 e 1 @147 ]
+"1830
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+"2229
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2374
+[v _ACKDT ACKDT `VEb  1 e 0 @1165 ]
+"2377
+[v _ACKEN ACKEN `VEb  1 e 0 @1164 ]
+"2380
+[v _ACKSTAT ACKSTAT `VEb  1 e 0 @1166 ]
+"2632
+[v _PEN PEN `VEb  1 e 0 @1162 ]
+"2737
+[v _RCEN RCEN `VEb  1 e 0 @1163 ]
+"2791
+[v _RSEN RSEN `VEb  1 e 0 @1161 ]
+"2806
+[v _SEN SEN `VEb  1 e 0 @1160 ]
+"3 D:\pic16\document\exercise-pic16f877a\lcd\lcd-and-i2c-16xN.X\libraryUser/lcd-i2c/i2c_lcd.c
+[v _RS RS `uc  1 e 1 0 ]
+[v _i2c_add i2c_add `uc  1 e 1 0 ]
+[v _BackLight_State BackLight_State `uc  1 e 1 0 ]
+"10 D:\pic16\document\exercise-pic16f877a\lcd\lcd-and-i2c-16xN.X\main1234.c
+[v _main main `(v  1 e 1 0 ]
+{
+"28
+} 0
+"31
+[v _screenMove screenMove `(v  1 e 1 0 ]
+{
+"41
+} 0
+"105 D:\pic16\document\exercise-pic16f877a\lcd\lcd-and-i2c-16xN.X\libraryUser/lcd-i2c/i2c_lcd.c
+[v _LCD_SR LCD_SR `(v  1 e 1 0 ]
+{
+"109
+} 0
+"99
+[v _LCD_SL LCD_SL `(v  1 e 1 0 ]
+{
+"103
+} 0
+"63
+[v _LCD_Write_String LCD_Write_String `(v  1 e 1 0 ]
+{
+[v LCD_Write_String@Str Str `*.24uc  1 a 1 wreg ]
+"65
+[v LCD_Write_String@i i `i  1 a 2 7 ]
+"63
+[v LCD_Write_String@Str Str `*.24uc  1 a 1 wreg ]
+"65
+[v LCD_Write_String@Str Str `*.24uc  1 a 1 9 ]
+"67
+} 0
+"56
+[v _LCD_Write_Char LCD_Write_Char `(v  1 e 1 0 ]
+{
+[v LCD_Write_Char@Data Data `uc  1 a 1 wreg ]
+[v LCD_Write_Char@Data Data `uc  1 a 1 wreg ]
+"58
+[v LCD_Write_Char@Data Data `uc  1 a 1 6 ]
+"61
+} 0
+"69
+[v _LCD_Set_Cursor LCD_Set_Cursor `(v  1 e 1 0 ]
+{
+[v LCD_Set_Cursor@ROW ROW `uc  1 a 1 wreg ]
+[v LCD_Set_Cursor@ROW ROW `uc  1 a 1 wreg ]
+[v LCD_Set_Cursor@COL COL `uc  1 p 1 7 ]
+[v LCD_Set_Cursor@ROW ROW `uc  1 a 1 10 ]
+"85
+} 0
+"6
+[v _LCD_Init LCD_Init `(v  1 e 1 0 ]
+{
+[v LCD_Init@I2C_Add I2C_Add `uc  1 a 1 wreg ]
+[v LCD_Init@I2C_Add I2C_Add `uc  1 a 1 wreg ]
+[v LCD_Init@I2C_BaudRate I2C_BaudRate `uc  1 p 1 8 ]
+"8
+[v LCD_Init@I2C_Add I2C_Add `uc  1 a 1 13 ]
+"30
+} 0
+"49
+[v _LCD_Cmd LCD_Cmd `(v  1 e 1 0 ]
+{
+[v LCD_Cmd@Cmd Cmd `uc  1 a 1 wreg ]
+[v LCD_Cmd@Cmd Cmd `uc  1 a 1 wreg ]
+"51
+[v LCD_Cmd@Cmd Cmd `uc  1 a 1 6 ]
+"54
+} 0
+"40
+[v _LCD_Write_4Bit LCD_Write_4Bit `(v  1 e 1 0 ]
+{
+[v LCD_Write_4Bit@Nibble Nibble `uc  1 a 1 wreg ]
+[v LCD_Write_4Bit@Nibble Nibble `uc  1 a 1 wreg ]
+"43
+[v LCD_Write_4Bit@Nibble Nibble `uc  1 a 1 4 ]
+"47
+} 0
+"32
+[v _IO_Expander_Write IO_Expander_Write `(v  1 e 1 0 ]
+{
+[v IO_Expander_Write@Data Data `uc  1 a 1 wreg ]
+[v IO_Expander_Write@Data Data `uc  1 a 1 wreg ]
+"34
+[v IO_Expander_Write@Data Data `uc  1 a 1 2 ]
+"38
+} 0
+"56 D:\pic16\document\exercise-pic16f877a\lcd\lcd-and-i2c-16xN.X\libraryUser/i2c/i2c-master.c
+[v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
+{
+"60
+} 0
+"36
+[v _I2C_Start I2C_Start `(v  1 e 1 0 ]
+{
+"40
+} 0
+"104
+[v _I2C_Read_Char I2C_Read_Char `(uc  1 e 1 0 ]
+{
+[v I2C_Read_Char@ACK ACK `uc  1 a 1 wreg ]
+[v I2C_Read_Char@ACK ACK `uc  1 a 1 wreg ]
+"108
+[v I2C_Read_Char@ACK ACK `uc  1 a 1 1 ]
+"121
+} 0
+"80
+[v _I2C_NACK I2C_NACK `(v  1 e 1 0 ]
+{
+"85
+} 0
+"67
+[v _I2C_ACK I2C_ACK `(v  1 e 1 0 ]
+{
+"72
+} 0
+"27
+[v _I2C_Wait I2C_Wait `(v  1 e 1 0 ]
+{
+"30
+} 0
+"6
+[v _I2C_Master_Init I2C_Master_Init `(v  1 e 1 0 ]
+{
+[v I2C_Master_Init@I2C_BaudRate I2C_BaudRate `DCul  1 p 4 0 ]
+"17
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\__lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"10
+[v ___lldiv@quotient quotient `ul  1 a 4 9 ]
+"11
+[v ___lldiv@counter counter `uc  1 a 1 13 ]
+"5
+[v ___lldiv@divisor divisor `ul  1 p 4 0 ]
+[v ___lldiv@dividend dividend `ul  1 p 4 4 ]
+"30
+} 0
