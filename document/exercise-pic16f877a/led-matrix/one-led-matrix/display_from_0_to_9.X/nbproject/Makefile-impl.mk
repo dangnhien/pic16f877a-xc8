@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=CODE
+PROJECTNAME=display_from_0_to_9.X
 
 # Active Configuration
 DEFAULTCONF=default

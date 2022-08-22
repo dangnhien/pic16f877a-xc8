@@ -1,0 +1,371 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$C:\Users\NGUYEN~1\AppData\Local\Temp\sl2oxb.o
+end_init CODE 0 0 0 3 2
+config CONFIG 4 2007 2007 1 2
+$dist/default/production\display_from_0_to_9.X.production.o
+cinit CODE 0 7D3 7D3 2D 2
+text1 CODE 0 780 780 53 2
+text2 CODE 0 68B 68B 19 2
+text3 CODE 0 6EC 6EC 44 2
+maintext CODE 0 665 665 13 2
+cstackCOMMON COMMON 1 70 70 C 1
+cstackBANK0 BANK0 1 20 20 2A 1
+inittext CODE 0 678 678 13 2
+idataBANK0 CODE 0 6A4 6A4 20 2
+idataBANK1 CODE 0 6C4 6C4 28 2
+idataBANK3 CODE 0 730 730 50 2
+dataBANK0 BANK0 1 4A 4A 20 1
+dataBANK1 BANK1 1 A0 A0 28 1
+dataBANK3 BANK3 1 190 190 50 1
+config CONFIG 4 2007 2007 1 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 6A-6F 1
+RAM C8-EF 1
+RAM 110-16F 1
+RAM 1E0-1EF 1
+BANK0 6A-6F 1
+BANK1 C8-EF 1
+BANK2 110-16F 1
+BANK3 1E0-1EF 1
+CONST 3-664 2
+CONST 800-1FFF 2
+ENTRY 3-664 2
+ENTRY 800-1FFF 2
+IDLOC 2000-2003 2
+STACK 110-16F 1
+CODE 3-664 2
+CODE 800-1FFF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-10F 1
+SFR3 180-18F 1
+COMMON 7C-7D 1
+EEDATA 2100-21FF 2
+STRCODE 3-664 2
+STRCODE 800-1FFF 2
+STRING 3-664 2
+STRING 800-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\display_from_0_to_9.X.production.o
+7D3 cinit CODE >661:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7D3 cinit CODE >664:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7D3 cinit CODE >727:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7D4 cinit CODE >728:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7D5 cinit CODE >729:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7D6 cinit CODE >730:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7D7 cinit CODE >731:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7D8 cinit CODE >732:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7D9 cinit CODE >733:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7DA cinit CODE >734:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7DB cinit CODE >735:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7DC cinit CODE >736:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7E1 cinit CODE >740:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7E2 cinit CODE >741:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7E3 cinit CODE >742:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7E4 cinit CODE >743:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7E5 cinit CODE >744:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7E6 cinit CODE >745:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7E7 cinit CODE >746:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7E8 cinit CODE >747:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7E9 cinit CODE >748:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7EA cinit CODE >749:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7EF cinit CODE >753:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7F0 cinit CODE >754:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7F1 cinit CODE >755:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7F2 cinit CODE >756:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7F3 cinit CODE >757:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7F4 cinit CODE >758:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7F5 cinit CODE >759:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7F6 cinit CODE >760:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7F7 cinit CODE >761:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7FC cinit CODE >767:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7FC cinit CODE >769:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+7FD cinit CODE >770:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+6EC text3 CODE >44:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+6ED text3 CODE >45:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+6EF text3 CODE >49:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+6F4 text3 CODE >50:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+6F8 text3 CODE >51:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+702 text3 CODE >52:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+704 text3 CODE >53:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+70D text3 CODE >54:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+711 text3 CODE >55:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+717 text3 CODE >56:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+72F text3 CODE >57:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+68B text2 CODE >4:C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\strlen.c
+68C text2 CODE >8:C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\strlen.c
+690 text2 CODE >9:C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\strlen.c
+691 text2 CODE >10:C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\strlen.c
+695 text2 CODE >9:C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\strlen.c
+69D text2 CODE >12:C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\strlen.c
+6A3 text2 CODE >13:C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\strlen.c
+780 text1 CODE >84:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+780 text1 CODE >86:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+795 text1 CODE >95:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+799 text1 CODE >98:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+79A text1 CODE >100:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+7A4 text1 CODE >101:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+7AD text1 CODE >102:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+7B9 text1 CODE >103:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+7D2 text1 CODE >105:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+665 maintext CODE >23:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+665 maintext CODE >24:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+669 maintext CODE >26:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+66A maintext CODE >27:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+66B maintext CODE >29:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+66E maintext CODE >30:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+66F maintext CODE >35:D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+678 inittext CODE >701:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+678 inittext CODE >702:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+679 inittext CODE >703:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+67A inittext CODE >704:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+67B inittext CODE >705:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+67C inittext CODE >712:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+67C inittext CODE >713:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+681 inittext CODE >714:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+682 inittext CODE >715:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+683 inittext CODE >716:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+684 inittext CODE >717:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+685 inittext CODE >718:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+686 inittext CODE >719:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+687 inittext CODE >720:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+688 inittext CODE >721:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+689 inittext CODE >722:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+68A inittext CODE >723:C:\Users\NGUYEN~1\AppData\Local\Temp\sl2ox.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 2 0 ABS 0 - dist/default/production\display_from_0_to_9.X.production.o
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__LdataBANK1 0 0 ABS 0 dataBANK1 -
+__LdataBANK3 0 0 ABS 0 dataBANK3 -
+__Hspace_0 800 0 ABS 0 - -
+__Hspace_1 1E0 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 0 0 ABS 0 - -
+__Hspace_4 400F 0 ABS 0 - -
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__HidataBANK1 0 0 ABS 0 idataBANK1 -
+__HidataBANK3 0 0 ABS 0 idataBANK3 -
+__size_of_Display_Led_Matrix 0 0 ABS 0 - dist/default/production\display_from_0_to_9.X.production.o
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Hstrings 0 0 ABS 0 strings -
+___sp 0 0 STACK 2 stack C:\Users\NGUYEN~1\AppData\Local\Temp\sl2oxb.o
+_data 190 0 BANK3 1 dataBANK3 dist/default/production\display_from_0_to_9.X.production.o
+_main CCA 0 CODE 0 maintext dist/default/production\display_from_0_to_9.X.production.o
+btemp 7E 0 ABS 0 - dist/default/production\display_from_0_to_9.X.production.o
+start 0 0 CODE 0 init C:\Users\NGUYEN~1\AppData\Local\Temp\sl2oxb.o
+__size_of_main 0 0 ABS 0 - dist/default/production\display_from_0_to_9.X.production.o
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__LidataBANK1 0 0 ABS 0 idataBANK1 -
+__LidataBANK3 0 0 ABS 0 idataBANK3 -
+__Hpowerup 0 0 CODE 0 powerup -
+intlevel0 0 0 ENTRY 0 functab C:\Users\NGUYEN~1\AppData\Local\Temp\sl2oxb.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\NGUYEN~1\AppData\Local\Temp\sl2oxb.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\NGUYEN~1\AppData\Local\Temp\sl2oxb.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\NGUYEN~1\AppData\Local\Temp\sl2oxb.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\NGUYEN~1\AppData\Local\Temp\sl2oxb.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\NGUYEN~1\AppData\Local\Temp\sl2oxb.o
+wtemp0 7E 0 ABS 0 - dist/default/production\display_from_0_to_9.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+_ADCON1 9F 0 ABS 0 - dist/default/production\display_from_0_to_9.X.production.o
+Display_Led_Matrix@Code 74 0 COMMON 1 cstackCOMMON dist/default/production\display_from_0_to_9.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
+run_char@i 49 0 BANK0 1 cstackBANK0 dist/default/production\display_from_0_to_9.X.production.o
+?_strlen 70 0 COMMON 1 cstackCOMMON dist/default/production\display_from_0_to_9.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\NGUYEN~1\AppData\Local\Temp\sl2oxb.o
+___stacklo 0 0 ABS 0 - C:\Users\NGUYEN~1\AppData\Local\Temp\sl2oxb.o
+hienThiViTriCoDinhN@F1005 4A 0 BANK0 1 dataBANK0 dist/default/production\display_from_0_to_9.X.production.o
+start_initialization FA6 0 CODE 0 cinit dist/default/production\display_from_0_to_9.X.production.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\display_from_0_to_9.X.production.o
+Display_Led_Matrix@i 77 0 COMMON 1 cstackCOMMON dist/default/production\display_from_0_to_9.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\NGUYEN~1\AppData\Local\Temp\sl2oxb.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Hcinit 1000 0 CODE 0 cinit -
+__end_of_strlen D48 0 CODE 0 text2 dist/default/production\display_from_0_to_9.X.production.o
+__Hstack 0 0 STACK 2 stack -
+__Hmaintext 0 0 ABS 0 maintext -
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4010 0 CONFIG 4 config -
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 ABS 0 bank3 -
+__Lcinit FA6 0 CODE 0 cinit -
+__Lstack 0 0 STACK 2 stack -
+__Linittext 0 0 ABS 0 inittext -
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 0 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 0 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+__size_of_run_char 0 0 ABS 0 - dist/default/production\display_from_0_to_9.X.production.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__S0 800 0 ABS 0 - -
+__S1 1E0 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+run_char@Array 20 0 BANK0 1 cstackBANK0 dist/default/production\display_from_0_to_9.X.production.o
+run_char@F1010 A0 0 BANK1 1 dataBANK1 dist/default/production\display_from_0_to_9.X.production.o
+run_char@Index 48 0 BANK0 1 cstackBANK0 dist/default/production\display_from_0_to_9.X.production.o
+__Lintentry 0 0 CODE 0 intentry -
+reset_vec 0 0 CODE 0 reset_vec C:\Users\NGUYEN~1\AppData\Local\Temp\sl2oxb.o
+strlen@s 73 0 COMMON 1 cstackCOMMON dist/default/production\display_from_0_to_9.X.production.o
+__pdataBANK0 4A 0 BANK0 1 dataBANK0 dist/default/production\display_from_0_to_9.X.production.o
+__pdataBANK1 A0 0 BANK1 1 dataBANK1 dist/default/production\display_from_0_to_9.X.production.o
+__pdataBANK3 190 0 BANK3 1 dataBANK3 dist/default/production\display_from_0_to_9.X.production.o
+__end_of_Display_Led_Matrix E60 0 CODE 0 text3 dist/default/production\display_from_0_to_9.X.production.o
+_run_char F00 0 CODE 0 text1 dist/default/production\display_from_0_to_9.X.production.o
+strlen@cp 74 0 COMMON 1 cstackCOMMON dist/default/production\display_from_0_to_9.X.production.o
+__end_of_run_char FA6 0 CODE 0 text1 dist/default/production\display_from_0_to_9.X.production.o
+__pmaintext CCA 0 CODE 0 maintext dist/default/production\display_from_0_to_9.X.production.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+__Hinittext 0 0 ABS 0 inittext -
+_Display_Led_Matrix DD8 0 CODE 0 text3 dist/default/production\display_from_0_to_9.X.production.o
+_strlen D16 0 CODE 0 text2 dist/default/production\display_from_0_to_9.X.production.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+init_fetch0 CF0 0 CODE 0 inittext dist/default/production\display_from_0_to_9.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__Lend_init 0 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization FF8 0 CODE 0 cinit dist/default/production\display_from_0_to_9.X.production.o
+__Hintentry 0 0 CODE 0 intentry -
+Display_Led_Matrix@Code_Shift 76 0 COMMON 1 cstackCOMMON dist/default/production\display_from_0_to_9.X.production.o
+__Lstrings 0 0 ABS 0 strings -
+__Hreset_vec 0 0 CODE 0 reset_vec -
+Display_Led_Matrix@Index 75 0 COMMON 1 cstackCOMMON dist/default/production\display_from_0_to_9.X.production.o
+__size_of_strlen 0 0 ABS 0 - dist/default/production\display_from_0_to_9.X.production.o
+Display_Led_Matrix@array 70 0 COMMON 1 cstackCOMMON dist/default/production\display_from_0_to_9.X.production.o
+__ptext1 F00 0 CODE 0 text1 dist/default/production\display_from_0_to_9.X.production.o
+__ptext2 D16 0 CODE 0 text2 dist/default/production\display_from_0_to_9.X.production.o
+__ptext3 DD8 0 CODE 0 text3 dist/default/production\display_from_0_to_9.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of__initialization FF8 0 CODE 0 cinit dist/default/production\display_from_0_to_9.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+__pidataBANK0 D48 0 CODE 0 idataBANK0 dist/default/production\display_from_0_to_9.X.production.o
+__pidataBANK1 D88 0 CODE 0 idataBANK1 dist/default/production\display_from_0_to_9.X.production.o
+__pidataBANK3 E60 0 CODE 0 idataBANK3 dist/default/production\display_from_0_to_9.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext -
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\display_from_0_to_9.X.production.o
+__Hend_init 6 0 CODE 0 end_init -
+init_ram0 CF8 0 CODE 0 inittext dist/default/production\display_from_0_to_9.X.production.o
+__end_of_main CF0 0 CODE 0 maintext dist/default/production\display_from_0_to_9.X.production.o
+_PORTB 6 0 ABS 0 - dist/default/production\display_from_0_to_9.X.production.o
+_PORTC 7 0 ABS 0 - dist/default/production\display_from_0_to_9.X.production.o
+_TRISB 86 0 ABS 0 - dist/default/production\display_from_0_to_9.X.production.o
+_TRISC 87 0 ABS 0 - dist/default/production\display_from_0_to_9.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__HdataBANK1 0 0 ABS 0 dataBANK1 -
+__HdataBANK3 0 0 ABS 0 dataBANK3 -
+__initialization FA6 0 CODE 0 cinit dist/default/production\display_from_0_to_9.X.production.o
+_control 62 0 BANK0 1 dataBANK0 dist/default/production\display_from_0_to_9.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 7D3 FA6 2D 2
+text1 0 780 F00 53 2
+text2 0 68B D16 19 2
+text3 0 6EC DD8 44 2
+maintext 0 665 CCA 13 2
+cstackCOMMON 1 70 70 C 1
+cstackBANK0 1 20 20 4A 1
+inittext 0 678 CF0 13 2
+reset_vec 0 0 0 3 2
+idataBANK0 0 6A4 D48 20 2
+idataBANK1 0 6C4 D88 28 2
+idataBANK3 0 730 E60 50 2
+dataBANK1 1 A0 A0 28 1
+dataBANK3 1 190 190 50 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
