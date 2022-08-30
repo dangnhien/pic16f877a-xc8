@@ -1,10 +1,10 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"216 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 216: extern volatile unsigned char PORTB __attribute__((address(0x006)));
-[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
-"278
+"278 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 278: extern volatile unsigned char PORTC __attribute__((address(0x007)));
 [v _PORTC `Vuc ~T0 @X0 0 e@7 ]
+"216
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 216: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 [v F842 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF842 ~T0 @X0 0 e ]
@@ -189,8 +189,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2363
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"13 ledMatrix.c
-[; ;ledMatrix.c: 13: unsigned char control[] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x08};
+"18 ledMatrix.c
+[; ;ledMatrix.c: 18: unsigned char control[] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80};
 [v _control `uc ~T0 @X0 -> 8 `i e ]
 [i _control
 :U ..
@@ -201,12 +201,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 16 `i `uc
 -> -> 32 `i `uc
 -> -> 64 `i `uc
--> -> 8 `i `uc
+-> -> 128 `i `uc
 ..
 ]
-"14
-[; ;ledMatrix.c: 14: unsigned char data[] = {
-[v _data `uc ~T0 @X0 -> 80 `i e ]
+"19
+[; ;ledMatrix.c: 19: unsigned char data[] = {
+[v _data `uc ~T0 @X0 -> 96 `i e ]
 [i _data
 :U ..
 -> -> 255 `i `uc
@@ -225,14 +225,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 127 `i `uc
 -> -> 127 `i `uc
 -> -> 255 `i `uc
--> -> 61 `i `uc
--> -> 94 `i `uc
--> -> 110 `i `uc
--> -> 118 `i `uc
--> -> 57 `i `uc
--> -> 255 `i `uc
--> -> 255 `i `uc
--> -> 255 `i `uc
+-> -> 231 `i `uc
+-> -> 231 `i `uc
+-> -> 231 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 231 `i `uc
+-> -> 231 `i `uc
+-> -> 0 `i `uc
 -> -> 255 `i `uc
 -> -> 189 `i `uc
 -> -> 118 `i `uc
@@ -289,135 +289,144 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 129 `i `uc
 -> -> 255 `i `uc
 -> -> 255 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
 ..
 ]
-"27
-[; ;ledMatrix.c: 27: void matrixLed(int k)
-[v _matrixLed `(v ~T0 @X0 1 ef1`i ]
-"28
-[; ;ledMatrix.c: 28: {
+"42
+[; ;ledMatrix.c: 42: void light_character_k(int k)
+[v _light_character_k `(v ~T0 @X0 1 ef1`i ]
+"43
+[; ;ledMatrix.c: 43: {
 {
-[e :U _matrixLed ]
-"27
-[; ;ledMatrix.c: 27: void matrixLed(int k)
+[e :U _light_character_k ]
+"42
+[; ;ledMatrix.c: 42: void light_character_k(int k)
 [v _k `i ~T0 @X0 1 r1 ]
-"28
-[; ;ledMatrix.c: 28: {
+"43
+[; ;ledMatrix.c: 43: {
 [f ]
-"29
-[; ;ledMatrix.c: 29:     int n;
+"44
+[; ;ledMatrix.c: 44:     int n;
 [v _n `i ~T0 @X0 1 a ]
-"30
-[; ;ledMatrix.c: 30:     PORTB = 0xFF;
-[e = _PORTB -> -> 255 `i `uc ]
-"31
-[; ;ledMatrix.c: 31:     PORTC = 0x00;
-[e = _PORTC -> -> 0 `i `uc ]
-"32
-[; ;ledMatrix.c: 32:     for(n=0;n<8;n++)
+"46
+[; ;ledMatrix.c: 46:     PORTC = 0xFF;
+[e = _PORTC -> -> 255 `i `uc ]
+"47
+[; ;ledMatrix.c: 47:     PORTB = 0x00;
+[e = _PORTB -> -> 0 `i `uc ]
+"49
+[; ;ledMatrix.c: 49:     for(n=0;n<8;n++)
 {
 [e = _n -> 0 `i ]
 [e $ < _n -> 8 `i 97  ]
 [e $U 98  ]
 [e :U 97 ]
-"33
-[; ;ledMatrix.c: 33:     {
+"50
+[; ;ledMatrix.c: 50:     {
 {
-"34
-[; ;ledMatrix.c: 34:         PORTB = data[k*8 + n];
-[e = _PORTB *U + &U _data * -> -> + * _k -> 8 `i _n `ui `ux -> -> # *U &U _data `ui `ux ]
-"35
-[; ;ledMatrix.c: 35:         PORTC = control[n];
-[e = _PORTC *U + &U _control * -> -> _n `ui `ux -> -> # *U &U _control `ui `ux ]
-"36
-[; ;ledMatrix.c: 36:         _delay((unsigned long)((1)*(16000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"37
-[; ;ledMatrix.c: 37:     }
+"51
+[; ;ledMatrix.c: 51:         PORTB = control[n];
+[e = _PORTB *U + &U _control * -> -> _n `ui `ux -> -> # *U &U _control `ui `ux ]
+"52
+[; ;ledMatrix.c: 52:         PORTC = data[k*8 + n];
+[e = _PORTC *U + &U _data * -> -> + * _k -> 8 `i _n `ui `ux -> -> # *U &U _data `ui `ux ]
+"53
+[; ;ledMatrix.c: 53:         _delay((unsigned long)((5)*(16000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+"54
+[; ;ledMatrix.c: 54:     }
 }
 [e ++ _n -> 1 `i ]
 [e $ < _n -> 8 `i 97  ]
 [e :U 98 ]
 }
-"38
-[; ;ledMatrix.c: 38: }
+"55
+[; ;ledMatrix.c: 55: }
 [e :UE 96 ]
 }
-"40
-[; ;ledMatrix.c: 40: void loopRunLed()
-[v _loopRunLed `(v ~T0 @X0 1 ef ]
-"41
-[; ;ledMatrix.c: 41: {
+"57
+[; ;ledMatrix.c: 57: void light_from_0_to_9()
+[v _light_from_0_to_9 `(v ~T0 @X0 1 ef ]
+"58
+[; ;ledMatrix.c: 58: {
 {
-[e :U _loopRunLed ]
+[e :U _light_from_0_to_9 ]
 [f ]
-"42
-[; ;ledMatrix.c: 42:     int chay = 0,lap;
-[v _chay `i ~T0 @X0 1 a ]
-[e = _chay -> 0 `i ]
-[v _lap `i ~T0 @X0 1 a ]
-"43
-[; ;ledMatrix.c: 43:     PORTB = 0xFF;
-[e = _PORTB -> -> 255 `i `uc ]
-"44
-[; ;ledMatrix.c: 44:     PORTC = 0xFF;
+"59
+[; ;ledMatrix.c: 59:     int run , loops;
+[v _run `i ~T0 @X0 1 a ]
+[v _loops `i ~T0 @X0 1 a ]
+"60
+[; ;ledMatrix.c: 60:     PORTC = 0xFF;
 [e = _PORTC -> -> 255 `i `uc ]
-"46
-[; ;ledMatrix.c: 46:     while(1)
+"61
+[; ;ledMatrix.c: 61:     PORTB = 0xFF;
+[e = _PORTB -> -> 255 `i `uc ]
+"63
+[; ;ledMatrix.c: 63:     while(1)
 [e :U 102 ]
-"47
-[; ;ledMatrix.c: 47:     {
+"64
+[; ;ledMatrix.c: 64:     {
 {
-"48
-[; ;ledMatrix.c: 48:         for(chay=0;chay<10;chay++)
+"65
+[; ;ledMatrix.c: 65:         for(run=0; run<10; run++)
 {
-[e = _chay -> 0 `i ]
-[e $ < _chay -> 10 `i 104  ]
+[e = _run -> 0 `i ]
+[e $ < _run -> 10 `i 104  ]
 [e $U 105  ]
 [e :U 104 ]
-"49
-[; ;ledMatrix.c: 49:         {
+"66
+[; ;ledMatrix.c: 66:         {
 {
-"50
-[; ;ledMatrix.c: 50:             for(lap=0;lap<500;lap++)
+"67
+[; ;ledMatrix.c: 67:             for(loops=0; loops<100; loops++)
 {
-[e = _lap -> 0 `i ]
-[e $ < _lap -> 500 `i 107  ]
+[e = _loops -> 0 `i ]
+[e $ < _loops -> 100 `i 107  ]
 [e $U 108  ]
 [e :U 107 ]
-"51
-[; ;ledMatrix.c: 51:             {
-{
-"52
-[; ;ledMatrix.c: 52:             matrixLed(chay);
-[e ( _matrixLed (1 _chay ]
-"53
-[; ;ledMatrix.c: 53:             }
-}
-[e ++ _lap -> 1 `i ]
-[e $ < _lap -> 500 `i 107  ]
+"68
+[; ;ledMatrix.c: 68:                 light_character_k(run);
+[e ( _light_character_k (1 _run ]
+[e ++ _loops -> 1 `i ]
+[e $ < _loops -> 100 `i 107  ]
 [e :U 108 ]
 }
-"54
-[; ;ledMatrix.c: 54:             PORTB = 0xFF;
-[e = _PORTB -> -> 255 `i `uc ]
-"55
-[; ;ledMatrix.c: 55:             PORTC = 0x00;
-[e = _PORTC -> -> 0 `i `uc ]
-"56
-[; ;ledMatrix.c: 56:             }
+"70
+[; ;ledMatrix.c: 70:             PORTC = 0xFF;
+[e = _PORTC -> -> 255 `i `uc ]
+"71
+[; ;ledMatrix.c: 71:             PORTB = 0x00;
+[e = _PORTB -> -> 0 `i `uc ]
+"72
+[; ;ledMatrix.c: 72:             }
 }
-[e ++ _chay -> 1 `i ]
-[e $ < _chay -> 10 `i 104  ]
+[e ++ _run -> 1 `i ]
+[e $ < _run -> 10 `i 104  ]
 [e :U 105 ]
 }
-"57
-[; ;ledMatrix.c: 57:         }
+"73
+[; ;ledMatrix.c: 73:         }
 }
 [e :U 101 ]
 [e $U 102  ]
 [e :U 103 ]
-"58
-[; ;ledMatrix.c: 58: }
+"74
+[; ;ledMatrix.c: 74: }
 [e :UE 100 ]
 }

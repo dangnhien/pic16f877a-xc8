@@ -12,15 +12,20 @@
 extern "C" {
 #endif
     
-    
-
 #include <xc.h>
 #include <stdio.h>
 #include <string.h>
     
-    #define _XTAL_FREQ 16000000
+    //#define _XTAL_FREQ 16000000
+    #define COLUMN_LED PORTC  
+    #define ROW_LED PORTB
+
+    #define TRIS_COLUMN_LED TRISC
+    #define TRIS_ROW_LED TRISB
     
-    void loopRunLed();
+    void light_character_k(int k);
+    void light_from_0_to_9();
+    
 
 #ifdef	__cplusplus
 }

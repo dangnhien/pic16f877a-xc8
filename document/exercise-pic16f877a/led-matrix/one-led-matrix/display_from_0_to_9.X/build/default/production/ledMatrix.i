@@ -7,9 +7,9 @@
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "ledMatrix.c" 2
-# 11 "ledMatrix.c"
+# 16 "ledMatrix.c"
 # 1 "./ledMatrix.h" 1
-# 17 "./ledMatrix.h"
+# 15 "./ledMatrix.h"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1719,7 +1719,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 17 "./ledMatrix.h" 2
+# 15 "./ledMatrix.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -1818,7 +1818,7 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 18 "./ledMatrix.h" 2
+# 16 "./ledMatrix.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c90\\string.h" 1 3
 # 14 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c90\\string.h" 3
@@ -1851,58 +1851,67 @@ extern char * strchr(const char *, int);
 extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
-# 19 "./ledMatrix.h" 2
+# 17 "./ledMatrix.h" 2
+# 26 "./ledMatrix.h"
+    void light_character_k(int k);
+    void light_from_0_to_9();
+# 16 "ledMatrix.c" 2
 
 
-
-
-    void loopRunLed();
-# 11 "ledMatrix.c" 2
-
-
-unsigned char control[] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x08};
+unsigned char control[] = {0x01,0x02,0x04,0x08,0x10,0x20,0x40,0x80};
 unsigned char data[] = {
-                        0xff,0x81,0x7e,0x7e,0x7e,0x7e,0x81,0xff,
-                        0xff,0x7b,0x7d,0x00,0x00,0x7f,0x7f,0xff,
-                        0x3d,0x5e,0x6e,0x76,0x39,0xff,0xff,0xff,
-                        0xff,0xbd,0x76,0x76,0x76,0x89,0xff,0xff,
-                        0xef,0xe7,0xeb,0x6d,0x00,0x6f,0xef,0xff,
-                        0xff,0x78,0x7a,0x7a,0xba,0xc6,0xff,0xff,
-                        0xff,0x81,0x76,0x76,0x76,0x8d,0xff,0xff,
-                        0xff,0xff,0xfc,0xfe,0xfe,0xfe,0x00,0xff,
-                        0xff,0x89,0x76,0x76,0x76,0x89,0xff,0xff,
-                        0xff,0xb9,0x76,0x76,0x76,0x81,0xff,0xff
-                       };
+                            0xff,0x81,0x7e,0x7e,0x7e,0x7e,0x81,0xff,
+                            0xff,0x7b,0x7d,0x00,0x00,0x7f,0x7f,0xff,
 
-void matrixLed(int k)
+
+
+
+
+                            0xe7,0xe7,0xe7,0x00,0x00,0xe7,0xe7,0x00,
+
+
+
+                            0xff,0xbd,0x76,0x76,0x76,0x89,0xff,0xff,
+                            0xef,0xe7,0xeb,0x6d,0x00,0x6f,0xef,0xff,
+                            0xff,0x78,0x7a,0x7a,0xba,0xc6,0xff,0xff,
+                            0xff,0x81,0x76,0x76,0x76,0x8d,0xff,0xff,
+                            0xff,0xff,0xfc,0xfe,0xfe,0xfe,0x00,0xff,
+                            0xff,0x89,0x76,0x76,0x76,0x89,0xff,0xff,
+                            0xff,0xb9,0x76,0x76,0x76,0x81,0xff,0xff,
+                            0x00, 0x00,0x00,0x00,0x00, 0x00,0x00,0x00,
+                            0xff, 0xff,0xff,0xff,0xff, 0xff,0xff,0xff
+                        };
+
+void light_character_k(int k)
 {
     int n;
-    PORTB = 0xFF;
-    PORTC = 0x00;
+
+    PORTC = 0xFF;
+    PORTB = 0x00;
+
     for(n=0;n<8;n++)
     {
-        PORTB = data[k*8 + n];
-        PORTC = control[n];
-        _delay((unsigned long)((1)*(16000000/4000.0)));
+        PORTB = control[n];
+        PORTC = data[k*8 + n];
+        _delay((unsigned long)((5)*(16000000/4000.0)));
     }
 }
 
-void loopRunLed()
+void light_from_0_to_9()
 {
-    int chay = 0,lap;
-    PORTB = 0xFF;
+    int run , loops;
     PORTC = 0xFF;
+    PORTB = 0xFF;
 
     while(1)
     {
-        for(chay=0;chay<10;chay++)
+        for(run=0; run<10; run++)
         {
-            for(lap=0;lap<500;lap++)
-            {
-            matrixLed(chay);
-            }
-            PORTB = 0xFF;
-            PORTC = 0x00;
+            for(loops=0; loops<100; loops++)
+                light_character_k(run);
+
+            PORTC = 0xFF;
+            PORTB = 0x00;
             }
         }
 }

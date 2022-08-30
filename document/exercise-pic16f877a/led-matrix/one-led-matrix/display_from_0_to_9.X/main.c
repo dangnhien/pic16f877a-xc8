@@ -12,30 +12,39 @@
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
 
-
-
 void Display_Led_Matrix(char Index, char *array);
 
 void hienThiViTriCoDinhN();
 void run_char();
 
 
+void initSystem();
+
 void main(void) {
-    ADCON1 = 0x06;
     
-    TRIS_ROW = 0x00;
-    TRIS_COLUMN = 0x00;
+    initSystem();
     
-    ROW=0x00;
-    COLUMN=0x00;
- 
     while(1)
     {
-        //hienThiViTriCoDinhN();
-        run_char();
+        //light_from_0_to_9();
+        light_character_k(11);
     }
     
     return;
+}
+
+void initSystem()
+{
+    // Turn off ADC moudule
+    ADCON1 = 0x06;  
+    
+    // Port as output pin
+    TRIS_COLUMN_LED = 0x00;
+    TRIS_ROW_LED = 0x00;
+    
+    //turn led matrix
+    COLUMN_LED=0xFF;
+    ROW_LED=0x00;
 }
 
 

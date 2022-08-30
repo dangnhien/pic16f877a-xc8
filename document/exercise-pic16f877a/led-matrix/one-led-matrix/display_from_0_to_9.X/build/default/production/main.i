@@ -1794,7 +1794,7 @@ extern char * strrichr(const char *, int);
 # 9 "main.c" 2
 
 # 1 "./ledMatrix.h" 1
-# 18 "./ledMatrix.h"
+# 16 "./ledMatrix.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c90\\stdio.h" 1 3
 # 11 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c90\\stdio.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.30\\pic\\include\\c90\\stdarg.h" 1 3
@@ -1875,16 +1875,11 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 18 "./ledMatrix.h" 2
-
-
-
-
-
-    void loopRunLed();
+# 16 "./ledMatrix.h" 2
+# 26 "./ledMatrix.h"
+    void light_character_k(int k);
+    void light_from_0_to_9();
 # 10 "main.c" 2
-
-
 
 
 
@@ -1896,22 +1891,33 @@ void hienThiViTriCoDinhN();
 void run_char();
 
 
+void initSystem();
+
 void main(void) {
-    ADCON1 = 0x06;
 
-    TRISC = 0x00;
-    TRISB = 0x00;
-
-    PORTC=0x00;
-    PORTB=0x00;
+    initSystem();
 
     while(1)
     {
 
-        run_char();
+        light_character_k(11);
     }
 
     return;
+}
+
+void initSystem()
+{
+
+    ADCON1 = 0x06;
+
+
+    TRISC = 0x00;
+    TRISB = 0x00;
+
+
+    PORTC=0xFF;
+    PORTB=0x00;
 }
 
 

@@ -1,5 +1,11 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
+"21 main.c
+[; ;main.c: 21: void initSystem();
+[v _initSystem `(v ~T0 @X0 0 e? ]
+"26 ./ledMatrix.h
+[; ;./ledMatrix.h: 26:     void light_character_k(int k);
+[v _light_character_k `(v ~T0 @X0 0 ef1`i ]
 "2229 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2229: extern volatile unsigned char ADCON1 __attribute__((address(0x09F)));
 [v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
@@ -15,9 +21,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "216
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 216: extern volatile unsigned char PORTB __attribute__((address(0x006)));
 [v _PORTB `Vuc ~T0 @X0 0 e@6 ]
-"20 main.c
-[; ;main.c: 20: void run_char();
-[v _run_char `(v ~T0 @X0 0 e? ]
 [v F842 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF842 ~T0 @X0 0 e ]
@@ -228,111 +231,126 @@ Version 4.0 HI-TECH Software Intermediate Code
 {
 [e :U _main ]
 [f ]
-"24
-[; ;main.c: 24:     ADCON1 = 0x06;
-[e = _ADCON1 -> -> 6 `i `uc ]
-"26
-[; ;main.c: 26:     TRISC = 0x00;
-[e = _TRISC -> -> 0 `i `uc ]
+"25
+[; ;main.c: 25:     initSystem();
+[e ( _initSystem ..  ]
 "27
-[; ;main.c: 27:     TRISB = 0x00;
-[e = _TRISB -> -> 0 `i `uc ]
-"29
-[; ;main.c: 29:     PORTC=0x00;
-[e = _PORTC -> -> 0 `i `uc ]
-"30
-[; ;main.c: 30:     PORTB=0x00;
-[e = _PORTB -> -> 0 `i `uc ]
-"32
-[; ;main.c: 32:     while(1)
+[; ;main.c: 27:     while(1)
 [e :U 98 ]
-"33
-[; ;main.c: 33:     {
+"28
+[; ;main.c: 28:     {
 {
-"35
-[; ;main.c: 35:         run_char();
-[e ( _run_char ..  ]
-"36
-[; ;main.c: 36:     }
+"30
+[; ;main.c: 30:         light_character_k(11);
+[e ( _light_character_k (1 -> 11 `i ]
+"31
+[; ;main.c: 31:     }
 }
 [e :U 97 ]
 [e $U 98  ]
 [e :U 99 ]
-"38
-[; ;main.c: 38:     return;
+"33
+[; ;main.c: 33:     return;
 [e $UE 96  ]
-"39
-[; ;main.c: 39: }
+"34
+[; ;main.c: 34: }
 [e :UE 96 ]
 }
-"44
-[; ;main.c: 44: void Display_Led_Matrix(char Index, char *array){
+"36
+[; ;main.c: 36: void initSystem()
+[v _initSystem `(v ~T0 @X0 1 ef ]
+"37
+[; ;main.c: 37: {
+{
+[e :U _initSystem ]
+[f ]
+"39
+[; ;main.c: 39:     ADCON1 = 0x06;
+[e = _ADCON1 -> -> 6 `i `uc ]
+"42
+[; ;main.c: 42:     TRISC = 0x00;
+[e = _TRISC -> -> 0 `i `uc ]
+"43
+[; ;main.c: 43:     TRISB = 0x00;
+[e = _TRISB -> -> 0 `i `uc ]
+"46
+[; ;main.c: 46:     PORTC=0xFF;
+[e = _PORTC -> -> 255 `i `uc ]
+"47
+[; ;main.c: 47:     PORTB=0x00;
+[e = _PORTB -> -> 0 `i `uc ]
+"48
+[; ;main.c: 48: }
+[e :UE 100 ]
+}
+"53
+[; ;main.c: 53: void Display_Led_Matrix(char Index, char *array){
 [v _Display_Led_Matrix `(v ~T0 @X0 1 ef2`uc`*uc ]
 {
 [e :U _Display_Led_Matrix ]
 [v _Index `uc ~T0 @X0 1 r1 ]
 [v _array `*uc ~T0 @X0 1 r2 ]
 [f ]
-"45
-[; ;main.c: 45:     char Code_Shift = 0x01;
+"54
+[; ;main.c: 54:     char Code_Shift = 0x01;
 [v _Code_Shift `uc ~T0 @X0 1 a ]
 [e = _Code_Shift -> -> 1 `i `uc ]
-"46
-[; ;main.c: 46:     char Code;
+"55
+[; ;main.c: 55:     char Code;
 [v _Code `uc ~T0 @X0 1 a ]
-"47
-[; ;main.c: 47:     char i;
+"56
+[; ;main.c: 56:     char i;
 [v _i `uc ~T0 @X0 1 a ]
-"49
-[; ;main.c: 49:     for(i=Index; i<= Index+7; i++){
+"58
+[; ;main.c: 58:     for(i=Index; i<= Index+7; i++){
 {
 [e = _i _Index ]
-[e $U 104  ]
-[e :U 101 ]
+[e $U 105  ]
+[e :U 102 ]
 {
-"50
-[; ;main.c: 50:         Code = ~Code_Shift;
+"59
+[; ;main.c: 59:         Code = ~Code_Shift;
 [e = _Code -> ~ -> _Code_Shift `i `uc ]
-"51
-[; ;main.c: 51:         PORTC = array[i];
+"60
+[; ;main.c: 60:         PORTC = array[i];
 [e = _PORTC -> *U + _array * -> _i `ux -> -> # *U _array `ui `ux `uc ]
-"52
-[; ;main.c: 52:         PORTB = Code;
+"61
+[; ;main.c: 61:         PORTB = Code;
 [e = _PORTB -> _Code `uc ]
-"53
-[; ;main.c: 53:         _delay((unsigned long)((1)*(16000000/4000.0)));
+"62
+[; ;main.c: 62:         _delay((unsigned long)((1)*(16000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"54
-[; ;main.c: 54:         PORTB = 0xFF;
+"63
+[; ;main.c: 63:         PORTB = 0xFF;
 [e = _PORTB -> -> 255 `i `uc ]
-"55
-[; ;main.c: 55:         Code_Shift = (char)(Code_Shift << 1);
+"64
+[; ;main.c: 64:         Code_Shift = (char)(Code_Shift << 1);
 [e = _Code_Shift -> << -> _Code_Shift `i -> 1 `i `uc ]
-"56
-[; ;main.c: 56:     }
+"65
+[; ;main.c: 65:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e :U 104 ]
-[e $ <= -> _i `i + -> _Index `i -> 7 `i 101  ]
-[e :U 102 ]
+[e :U 105 ]
+[e $ <= -> _i `i + -> _Index `i -> 7 `i 102  ]
+[e :U 103 ]
 }
-"57
-[; ;main.c: 57: }
-[e :UE 100 ]
+"66
+[; ;main.c: 66: }
+[e :UE 101 ]
 }
-"60
-[; ;main.c: 60: void hienThiViTriCoDinhN()
+"69
+[; ;main.c: 69: void hienThiViTriCoDinhN()
 [v _hienThiViTriCoDinhN `(v ~T0 @X0 1 ef ]
-"61
-[; ;main.c: 61: {
+"70
+[; ;main.c: 70: {
 {
 [e :U _hienThiViTriCoDinhN ]
 [f ]
-[v F1005 `uc ~T0 @X0 -> 24 `i s ]
-[i F1005
+[v F1009 `uc ~T0 @X0 -> 24 `i s ]
+[i F1009
 :U ..
-"62
-[; ;main.c: 62:     char Array[] = {
+"71
+[; ;main.c: 71:     char Array[] = {
 -> -> 255 `i `uc
 -> -> 255 `i `uc
 -> -> 0 `i `uc
@@ -360,64 +378,64 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _Array `uc ~T0 @X0 -> 24 `i a ]
-[e = _Array F1005 ]
-"73
-[; ;main.c: 73:     for(char Index=0; Index <=16; Index=Index+8)
+[e = _Array F1009 ]
+"82
+[; ;main.c: 82:     for(char Index=0; Index <=16; Index=Index+8)
 {
 [v _Index `uc ~T0 @X0 1 a ]
 [e = _Index -> -> 0 `i `uc ]
-[e $ <= -> _Index `i -> 16 `i 106  ]
-[e $U 107  ]
-[e :U 106 ]
-"74
-[; ;main.c: 74:     {
+[e $ <= -> _Index `i -> 16 `i 107  ]
+[e $U 108  ]
+[e :U 107 ]
+"83
+[; ;main.c: 83:     {
 {
-"75
-[; ;main.c: 75:         for(char i=0; i<30; i++){
+"84
+[; ;main.c: 84:         for(char i=0; i<30; i++){
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 30 `i 109  ]
-[e $U 110  ]
-[e :U 109 ]
+[e $ < -> _i `i -> 30 `i 110  ]
+[e $U 111  ]
+[e :U 110 ]
 {
-"76
-[; ;main.c: 76:             Display_Led_Matrix(Index, Array);
+"85
+[; ;main.c: 85:             Display_Led_Matrix(Index, Array);
 [e ( _Display_Led_Matrix (2 , _Index &U _Array ]
-"77
-[; ;main.c: 77:             _delay((unsigned long)((10)*(16000000/4000.0)));
+"86
+[; ;main.c: 86:             _delay((unsigned long)((10)*(16000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"78
-[; ;main.c: 78:         }
+"87
+[; ;main.c: 87:         }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 30 `i 109  ]
-[e :U 110 ]
+[e $ < -> _i `i -> 30 `i 110  ]
+[e :U 111 ]
 }
-"79
-[; ;main.c: 79:     }
+"88
+[; ;main.c: 88:     }
 }
 [e = _Index -> + -> _Index `i -> 8 `i `uc ]
-[e $ <= -> _Index `i -> 16 `i 106  ]
-[e :U 107 ]
+[e $ <= -> _Index `i -> 16 `i 107  ]
+[e :U 108 ]
 }
-"80
-[; ;main.c: 80:  }
-[e :UE 105 ]
+"89
+[; ;main.c: 89:  }
+[e :UE 106 ]
 }
-"84
-[; ;main.c: 84: void run_char()
+"93
+[; ;main.c: 93: void run_char()
 [v _run_char `(v ~T0 @X0 1 ef ]
-"85
-[; ;main.c: 85: {
+"94
+[; ;main.c: 94: {
 {
 [e :U _run_char ]
 [f ]
-[v F1010 `uc ~T0 @X0 -> 40 `i s ]
-[i F1010
+[v F1014 `uc ~T0 @X0 -> 40 `i s ]
+[i F1014
 :U ..
-"86
-[; ;main.c: 86:     char Array[]={
+"95
+[; ;main.c: 95:     char Array[]={
 -> -> 255 `i `uc
 -> -> 255 `i `uc
 -> -> 255 `i `uc
@@ -461,50 +479,50 @@ Version 4.0 HI-TECH Software Intermediate Code
 ..
 ]
 [v _Array `uc ~T0 @X0 -> 40 `i a ]
-[e = _Array F1010 ]
-"95
-[; ;main.c: 95:     for(char Index = 0; Index<=(char)(strlen(Array)+1-10); Index++)
+[e = _Array F1014 ]
+"104
+[; ;main.c: 104:     for(char Index = 0; Index<=(char)(strlen(Array)+1-10); Index++)
 {
 [v _Index `uc ~T0 @X0 1 a ]
 [e = _Index -> -> 0 `i `uc ]
-[e $U 116  ]
-[e :U 113 ]
-"97
-[; ;main.c: 97:     {
+[e $U 117  ]
+[e :U 114 ]
+"106
+[; ;main.c: 106:     {
 {
-"98
-[; ;main.c: 98:         for(char i=0; i<=10; i++)
+"107
+[; ;main.c: 107:         for(char i=0; i<=10; i++)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ <= -> _i `i -> 10 `i 117  ]
-[e $U 118  ]
-[e :U 117 ]
-"99
-[; ;main.c: 99:         {
+[e $ <= -> _i `i -> 10 `i 118  ]
+[e $U 119  ]
+[e :U 118 ]
+"108
+[; ;main.c: 108:         {
 {
-"100
-[; ;main.c: 100:             Display_Led_Matrix(Index, Array);
+"109
+[; ;main.c: 109:             Display_Led_Matrix(Index, Array);
 [e ( _Display_Led_Matrix (2 , _Index &U _Array ]
-"101
-[; ;main.c: 101:             _delay((unsigned long)((10)*(16000000/4000.0)));
+"110
+[; ;main.c: 110:             _delay((unsigned long)((10)*(16000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"102
-[; ;main.c: 102:         }
+"111
+[; ;main.c: 111:         }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ <= -> _i `i -> 10 `i 117  ]
-[e :U 118 ]
+[e $ <= -> _i `i -> 10 `i 118  ]
+[e :U 119 ]
 }
-"103
-[; ;main.c: 103:     }
+"112
+[; ;main.c: 112:     }
 }
 [e ++ _Index -> -> 1 `i `uc ]
-[e :U 116 ]
-[e $ <= -> _Index `i -> -> - + ( _strlen (1 -> &U _Array `*Cuc -> -> 1 `i `ui -> -> 10 `i `ui `uc `i 113  ]
-[e :U 114 ]
+[e :U 117 ]
+[e $ <= -> _Index `i -> -> - + ( _strlen (1 -> &U _Array `*Cuc -> -> 1 `i `ui -> -> 10 `i `ui `uc `i 114  ]
+[e :U 115 ]
 }
-"105
-[; ;main.c: 105: }
-[e :UE 112 ]
+"114
+[; ;main.c: 114: }
+[e :UE 113 ]
 }

@@ -13,14 +13,14 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"27 D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\ledMatrix.c
-[v _matrixLed matrixLed `(v  1 e 1 0 ]
+"42 D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\ledMatrix.c
+[v _light_character_k light_character_k `(v  1 e 1 0 ]
 "23 D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"44
+"36
+[v _initSystem initSystem `(v  1 e 1 0 ]
+"53
 [v _Display_Led_Matrix Display_Led_Matrix `(v  1 e 1 0 ]
-"84
-[v _run_char run_char `(v  1 e 1 0 ]
 "216 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
 "278
@@ -31,53 +31,26 @@
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "2229
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
-"13 D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\ledMatrix.c
+"18 D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\ledMatrix.c
 [v _control control `[8]uc  1 e 8 0 ]
-"14
-[v _data data `[80]uc  1 e 80 0 ]
+"19
+[v _data data `[96]uc  1 e 96 0 ]
 "23 D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"39
+"34
 } 0
-"84
-[v _run_char run_char `(v  1 e 1 0 ]
+"42 D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\ledMatrix.c
+[v _light_character_k light_character_k `(v  1 e 1 0 ]
 {
-"98
-[v run_char@i i `uc  1 a 1 41 ]
-"95
-[v run_char@Index Index `uc  1 a 1 40 ]
-"86
-[v run_char@Array Array `[40]uc  1 a 40 0 ]
-"85
-[v run_char@F1010 F1010 `[40]uc  1 s 40 F1010 ]
-"105
-} 0
-"4 C:\Program Files\Microchip\xc8\v2.30\pic\sources\c90\common\strlen.c
-[v _strlen strlen `(ui  1 e 2 0 ]
-{
-[v strlen@s s `*.4DCuc  1 a 1 wreg ]
-"6
-[v strlen@cp cp `*.4DCuc  1 a 1 4 ]
-"4
-[v strlen@s s `*.4DCuc  1 a 1 wreg ]
-"8
-[v strlen@s s `*.4DCuc  1 a 1 3 ]
-"13
-} 0
-"44 D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
-[v _Display_Led_Matrix Display_Led_Matrix `(v  1 e 1 0 ]
-{
-[v Display_Led_Matrix@Index Index `uc  1 a 1 wreg ]
-"47
-[v Display_Led_Matrix@i i `uc  1 a 1 7 ]
-"45
-[v Display_Led_Matrix@Code_Shift Code_Shift `uc  1 a 1 6 ]
-"46
-[v Display_Led_Matrix@Code Code `uc  1 a 1 4 ]
 "44
-[v Display_Led_Matrix@Index Index `uc  1 a 1 wreg ]
-[v Display_Led_Matrix@array array `*.4uc  1 p 1 0 ]
-[v Display_Led_Matrix@Index Index `uc  1 a 1 5 ]
-"57
+[v light_character_k@n n `i  1 a 2 5 ]
+"42
+[v light_character_k@k k `i  1 p 2 0 ]
+"55
+} 0
+"36 D:\pic16\document\exercise-pic16f877a\led-matrix\one-led-matrix\display_from_0_to_9.X\main.c
+[v _initSystem initSystem `(v  1 e 1 0 ]
+{
+"48
 } 0
